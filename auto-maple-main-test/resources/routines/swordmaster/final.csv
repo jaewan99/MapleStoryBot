@@ -1,0 +1,13 @@
+
+@, label=Top
+
+@, label=Bottom
+*, x=.3, y=.35, frequency=1, skip=False, adjust=False
+*, x=.2, y=.14, frequency=1, skip=False, adjust=False
+*, x=.2, y=.025, frequency=7, skip=False, adjust=False
+*, x=.4, y=.025, frequency=7, skip=False, adjust=False
+    coShower
+    eShower
+*, x=.8, y=.025, frequency=7, skip=False, adjust=False
+*, x=.86, y=.14, frequency=1, skip=False, adjust=False
+*, x=.8, y=.35, frequency=1, skip=False, adjust=False

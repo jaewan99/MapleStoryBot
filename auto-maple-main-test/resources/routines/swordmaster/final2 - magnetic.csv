@@ -1,0 +1,14 @@
+
+@, label=Top
+
+@, label=Bottom
+*, x=.2, y=.3, frequency=1, skip=False, adjust=False
+    RopeConnect
+    Wait, duration=1
+*, x=.2, y=.13, frequency=1, skip=False, adjust=False
+    Wait, duration=.6
+*, x=.5, y=.10, frequency=1, skip=False, adjust=False
+    Wait, duration=.5
+*, x=.8, y=.17, frequency=1, skip=False, adjust=False
+    Wait, duration=.6
+*, x=.8, y=.35, frequency=1, skip=False, adjust=False

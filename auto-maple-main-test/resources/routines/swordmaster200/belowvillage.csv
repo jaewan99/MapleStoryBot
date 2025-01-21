@@ -1,0 +1,28 @@
+
+@, label=Top
+
+@, label=Bottom
+*, x=0.800, y=0.280, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.7, y=0.280, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.6, y=0.280, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.5, y=0.280, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.4, y=0.280, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.3, y=0.280, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.2, y=0.280, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.3, y=.28, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.4, y=.28, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.5, y=.28, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.6, y=.28, frequency=1, skip=False, adjust=False
+    Attack
+*, x=.7, y=.28, frequency=1, skip=False, adjust=False
+    Attack
