@@ -1,6 +1,0 @@
-
-@, label=Top
-
-@, label=Bottom
-*, x=.3, y=.04, frequency=1, skip=False, adjust=False
-*, x=.3, y=.3, frequency=1, skip=False, adjust=False
