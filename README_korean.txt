@@ -29,5 +29,4 @@ To change the modification of the players movement
 
 --------------------------------------------------
 As up, 1,22,2025
-final2.csv == is the newest
-final2-test.csv == improving for the changes
+testfinal2.csv == is the newest
