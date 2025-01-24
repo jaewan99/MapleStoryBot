@@ -162,10 +162,13 @@ class Routine:
         # for adding more randomness in the routine // see 
         chanceOfOccurance = self.display[self.index][:-1]
         if  chanceOfOccurance in self.labels:
-            if random.random() <= int(chanceOfOccurance):
-                self.index = (self.index + 1) % len(self.sequence)
-            else:
-                self.index = (self.index +int(chanceOfOccurance)) % len(self.sequence)
+            # print(random.random())
+            # print(float(chanceOfOccurance))
+            # skipIndex = self.display[self.index+1][:-1]
+            # print(skipIndex)
+            if random.random() > random.uniform(float(chanceOfOccurance)-.1, float(chanceOfOccurance)+.1):
+                skipIndex = self.display[self.index+1][:-1]
+                self.index = (self.index +int(skipIndex)+1) % len(self.sequence)
   
         self.index = (self.index + 1) % len(self.sequence)
 
