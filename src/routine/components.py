@@ -90,7 +90,6 @@ class Point(Component):
     @utils.run_if_enabled
     def _increment_counter(self):
         """Increments this Point's counter, wrapping back to 0 at the upper bound."""
-
         self.counter = (self.counter + 1) % self.frequency
 
     def info(self):

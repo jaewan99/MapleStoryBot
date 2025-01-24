@@ -5,7 +5,7 @@ import csv
 from os.path import splitext, basename
 from src.routine.components import Point, Label, Jump, Setting, Command, SYMBOLS
 from src.routine.layout import Layout
-
+import random
 
 def update(func):
     """
@@ -159,6 +159,14 @@ class Routine:
     def step(self):
         """Increments config.seq_index and wraps back to 0 at the end of config.sequence."""
 
+        # for adding more randomness in the routine // see 
+        chanceOfOccurance = self.display[self.index][:-1]
+        if  chanceOfOccurance in self.labels:
+            if random.random() <= int(chanceOfOccurance):
+                self.index = (self.index + 1) % len(self.sequence)
+            else:
+                self.index = (self.index +int(chanceOfOccurance)) % len(self.sequence)
+  
         self.index = (self.index + 1) % len(self.sequence)
 
     def save(self, file_path):
