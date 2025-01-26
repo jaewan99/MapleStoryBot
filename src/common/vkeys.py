@@ -216,13 +216,21 @@ def press(key, n, down_time=0.05, up_time=0.1):
     :param up_time:     Duration of release (in seconds).
     :return:            None
     """
-
     for _ in range(n):
         key_down(key)
+        # time.sleep(down_time)
         time.sleep(down_time * (0.8 + 0.4 * random()))
         key_up(key)
         time.sleep(up_time * (0.8 + 0.4 * random()))
 
+@utils.run_if_enabled
+def pressJump(key, n, down_time=0.05, up_time=0.01):
+        for _ in range(n):
+            key_down(key)
+            time.sleep(down_time)
+            # time.sleep(down_time * (0.2 + 0.4 * random()))
+            key_up(key)
+            time.sleep(up_time * (0.2 + 0.4 * random()))
 
 @utils.run_if_enabled
 def click(position, button='left'):

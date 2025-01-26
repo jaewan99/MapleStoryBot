@@ -4,7 +4,7 @@ from src.common import config, settings, utils
 import time
 import math
 from src.routine.components import Command
-from src.common.vkeys import press, key_down, key_up
+from src.common.vkeys import press, key_down, key_up, pressJump
 
 import random
 # List of key mappings
@@ -70,28 +70,30 @@ def step(direction, target):
     """
 
     num_presses = 2
-    
     if direction == 'up' or direction == 'down':
         num_presses = 1
     if config.stage_fright and direction != 'up' and utils.bernoulli(0.75):
         time.sleep(utils.rand_float(0.1, 0.3))
     d_y = target[1] - config.player_pos[1]
     if abs(d_y) > settings.move_tolerance * 1.5:
+        uptimeRand1 = (random.uniform(.05,.07))
+        uptimeRand2 = (random.uniform(.05,.07))
         if direction == 'down':
-            press(Key.JUMP, 3)
+            pressJump(Key.JUMP, 1, down_time=uptimeRand1)
+            pressJump(Key.JUMP, 1, down_time=uptimeRand2)
+            pressJump(Key.JUMP, 1, down_time=uptimeRand1)
+
         elif direction == 'up':
-            # time.sleep(3)
-            # print('jump')
-            press(Key.JUMP, 2)
+            pressJump(Key.JUMP, 1, down_time=uptimeRand1)
+            pressJump(Key.JUMP, 1, down_time=uptimeRand2)
+
     else:
-        press(Key.Attack, 1)
+        uptimeRand = (random.uniform(.088,.098))  
+        press(Key.Attack, 1, down_time=uptimeRand)
 
-        #for adele
-        # time.sleep(.6)
-        
+    uptimeRand = (random.uniform(.088,.096))
 
-    # time.sleep(0.1)
-    press(Key.FLASH_JUMP, num_presses)
+    pressJump(Key.FLASH_JUMP, num_presses, uptimeRand)
 
 
 class Adjust(Command):
@@ -164,9 +166,9 @@ class Buff(Command):
         now = time.time()
         
         if self.cd120_buff_time == 0 or now - self.cd120_buff_time > 90:
-            press(Key.루나, 2)
+            press(Key.루나, 2, down_time=0.1)
             # press(Key.큰칼, 2)
-            press(Key.코스모스, 2)
+            press(Key.코스모스, 2, down_time=0.1)
             self.cd120_buff_time = now
         
         # if self.cd180_buff_time == 0 or now - self.cd180_buff_time > 180:
@@ -207,9 +209,9 @@ class FlashJump(Command):
         randomJump = (random.uniform(.3,.6))
         if self.direction == 'up':
             
-            press(Key.FLASH_JUMP, randomJump)
+            press(Key.FLASH_JUMP, key_down=randomJump)
         else:
-            press(Key.FLASH_JUMP, randomJump)
+            press(Key.FLASH_JUMP, key_down=randomJump)
         key_up(self.direction)
         time.sleep(0.2)
 		
@@ -219,12 +221,18 @@ class Attack(Command):
     def main(self):
         uptimeRand = (random.uniform(.03,.07))
         press(Key.Attack, 1, up_time=uptimeRand)
+
+        # if random.random() < 0.7:
+        #     press(Key.Attack, 1, up_time=uptimeRand)
+        # else:
+        #     press(Key.Attack, 2, up_time=uptimeRand)
+        #     time.sleep(0.2)
 		
 class JUMPING(Command):
     """Uses 'Noble summons' once."""
-
     def main(self):
         uptimeRand = (random.uniform(.03,.07))
+        print("JUMPING")
         press(Key.JUMP, 1, up_time=uptimeRand)
 
 
@@ -242,14 +250,16 @@ class eShower(Command):
         time.sleep(.5)
         key_down('down')
         time.sleep(.3)
-        press(Key.에샤워, 5)
+        press(Key.에샤워, 1, down_time=0.07)
         time.sleep(.05)
         key_up('down')
 class RopeConnect(Command):
     """Uses 'Attack' once."""
 
     def main(self):
-        press(Key.HIGH_RISE, 3, up_time=0.05)
+        #  this is the one that caused captcha
+        uptimeRand = (random.uniform(.03,.07))
+        press(Key.HIGH_RISE, 2, down_time=uptimeRand)
 
 
 

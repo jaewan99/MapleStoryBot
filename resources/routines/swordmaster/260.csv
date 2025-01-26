@@ -1,6 +1,6 @@
+@, label=.999
 @, label=1
 *, x=.2, y=.3, frequency=1, skip=False, adjust=False
-    RopeConnect
     Wait, duration=1
 *, x=.2, y=.06, frequency=1, skip=False, adjust=False
 *, x=.86, y=.06, frequency=1, skip=False, adjust=False
@@ -11,15 +11,9 @@
     Wait, duration=.5
 *, x=.2, y=.2, frequency=5, skip=False, adjust=False
     Wait, duration=.6
-@, label=.2
-@, label=3
-*, x=.8, y=.15, frequency=1, skip=False, adjust=False
-*, x=.5, y=.15, frequency=1, skip=False, adjust=False
-*, x=.2, y=.3, frequency=1, skip=False, adjust=False
 @, label=.3
 @, label=4
 *, x=.8, y=.35, frequency=1, skip=False, adjust=False
-    RopeConnect
     Wait, duration=1
 *, x=.86, y=.06, frequency=1, skip=False, adjust=False
 *, x=.2, y=.06, frequency=1, skip=False, adjust=False

@@ -166,7 +166,7 @@ class Routine:
             # print(float(chanceOfOccurance))
             # skipIndex = self.display[self.index+1][:-1]
             # print(skipIndex)
-            if random.random() > random.uniform(float(chanceOfOccurance)-.1, float(chanceOfOccurance)+.1):
+            if random.random() > random.uniform(float(chanceOfOccurance), float(chanceOfOccurance)+.1):
                 skipIndex = self.display[self.index+1][:-1]
                 self.index = (self.index +int(skipIndex)+1) % len(self.sequence)
   

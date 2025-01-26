@@ -1,2 +1,10 @@
 *, x=.2, y=.2, frequency=1, skip=False, adjust=False
 *, x=.9, y=.2, frequency=1, skip=False, adjust=False
+
+
+
+@, label=.2
+@, label=3
+*, x=.8, y=.15, frequency=1, skip=False, adjust=False
+*, x=.5, y=.15, frequency=1, skip=False, adjust=False
+*, x=.2, y=.3, frequency=1, skip=False, adjust=False

@@ -25,8 +25,11 @@ error with "git.clone" blah blah after installing for the first time
 
 --------------------------------------------------
 To change the modification of the players movement
-- resources -> command_book -> swordmaster (the default setting)
+- resources -> command_book -> swordmaster (the default setting) -> step (this is the 'main')
 
+
+For randomess of players routine // check
+- src -> routine -> routine.py // def(step)
 --------------------------------------------------
 As up, 1,22,2025
 testfinal2.csv == is the newest
